@@ -1,602 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Kelly Eckenrode - Academic Excellence Through Personalized Learning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Caveat:wght@400;700&family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. E Tutoring – Academic Excellence Through Personalized Learning</title>
+  <meta name="description" content="One‑on‑one tutoring by Dr. Kelly Eckenrode (PhD, Molecular Biology). High‑school & middle‑school support across Biology, AP Bio, APES, Math foundations, writing, executive function coaching, and test prep in Sharon, Dedham, Norwood, Walpole, Canton, and Stoughton." />
 
-        :root {
-            --deep-red: #A52A2A;
-            --burnt-orange: #FF4500;
-            --golden-yellow: #FFD700;
-            --warm-gold: #FFA500;
-            --cream: #F5F5DC;
-            --warm-white: #FFF8E7;
-            --charcoal: #2F2F2F;
-            --soft-pink: #FF69B4;
-            --vibrant-red: #DC143C;
-            --bright-coral: #FF6347;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Crimson Text', serif;
-            line-height: 1.6;
-            color: var(--charcoal);
-            background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
-            overflow-x: hidden;
-        }
+  <style>
+    :root {
+      /* warm, welcoming palette */
+      --bg: #fffaf3;            /* warm paper */
+      --card: #fffdf8;          /* softer card */
+      --ink: #2d2a26;           /* charcoal */
+      --brand: #a73d2a;         /* warm brick */
+      --brand-2: #d46b1a;       /* amber/coral */
+      --brand-3: #f2b705;       /* golden */
+      --muted: #7a6f66;         
+      --line: #eddcc6;          /* light line */
+      --success: #2a7a4b;
+    }
 
-        /* Matisse-inspired abstract background elements */
-        .bg-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6; letter-spacing: 0.2px;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        .shape {
-            position: absolute;
-            border-radius: 50% 20% 80% 30%;
-        }
+    .container { width: min(1200px, 92vw); margin-inline: auto; }
 
-        .shape-1 {
-            top: 10%;
-            left: -5%;
-            width: 200px;
-            height: 300px;
-            background: linear-gradient(45deg, var(--vibrant-red), var(--bright-coral));
-            opacity: 0.15;
-            transform: rotate(15deg);
-        }
+    /* Header / Nav */
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--bg) 80%, white 20% / 0.8); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.3px; }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 70%); box-shadow: 0 4px 14px rgb(167 61 42 / 18%); }
+    .brand-mark svg { width: 22px; height: 22px; fill: white; }
+    .nav a.btn { display: inline-block; padding: 10px 16px; border-radius: 999px; background: linear-gradient(135deg, var(--brand-2), var(--brand)); color: #fff; font-weight: 600; border: 2px solid var(--brand-3); box-shadow: 0 6px 18px rgb(212 107 26 / 25%); }
+    .nav-links { display: flex; gap: 20px; align-items: center; font-weight: 600; }
+    .nav-links a { padding: 8px 10px; border-radius: 8px; }
+    .nav-links a:hover { background: #fff; }
 
-        .shape-2 {
-            top: 60%;
-            right: -10%;
-            width: 250px;
-            height: 180px;
-            background: linear-gradient(120deg, var(--golden-yellow), var(--warm-gold));
-            opacity: 0.12;
-            transform: rotate(-25deg);
-        }
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; padding: 40px 0 24px; }
+    .eyebrow { color: var(--brand-2); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem; }
+    h1 { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.25rem); line-height: 1.12; margin: 6px 0 10px; color: var(--brand); }
+    .sub { font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px; }
+    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; border: none; font-weight: 700; cursor: pointer; }
+    .btn-primary { background: linear-gradient(135deg, var(--brand-3), var(--brand-2)); color: #2c1b00; border: 2px solid color-mix(in oklab, var(--brand-3) 80%, black 10%); }
+    .btn-primary:hover { filter: contrast(1.05) saturate(1.05); }
+    .btn-ghost { background: #fff; color: var(--brand); border: 2px solid var(--line); }
+    .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; box-shadow: 0 12px 30px rgb(0 0 0 / 6%);
+      position: relative; overflow: hidden; }
+    .hero-card::after { content: ""; position: absolute; inset: -30% -40% auto auto; width: 220px; height: 220px; background: radial-gradient(120px 120px at 70% 30%, color-mix(in oklab, var(--brand-3) 60%, white 40%), transparent 70%);
+      opacity: 0.35; pointer-events: none; }
+    .avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; object-fit: cover; background: #f6ead9; border: 1px solid var(--line); }
+    .mini-about h3 { margin: 0 0 6px; font-family: "Playfair Display", serif; font-size: 1.2rem; color: var(--ink); }
+    .kpis { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-weight: 600; color: var(--muted); }
+    .kpis span { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--line); }
 
-        .shape-3 {
-            bottom: 20%;
-            left: 15%;
-            width: 180px;
-            height: 220px;
-            background: var(--soft-pink);
-            opacity: 0.1;
-            transform: rotate(45deg);
-        }
+    /* Sections */
+    section { padding: 56px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+    .section-head h2 { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 3.5vw, 2.1rem); color: var(--ink); margin: 0; }
+    .section-head p { margin: 0; color: var(--muted); }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    /* Services */
+    .grid { display: grid; gap: 18px; }
+    .grid.services { grid-template-columns: repeat(12, 1fr); }
+    .service { grid-column: span 6; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: start; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
+    .service svg { width: 36px; height: 36px; }
+    .service h3 { margin: 0 0 6px; font-size: 1.15rem; }
+    .service p { margin: 0; color: var(--muted); }
 
-        /* Header */
-        header {
-            padding: 40px 0;
-            text-align: center;
-            position: relative;
-        }
+    /* Science motif */
+    .motif { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: center; background: linear-gradient(145deg, #fff7e3, #fffaf3); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
+    .motif svg { width: 100%; height: auto; }
 
-        .header-decoration {
-            width: 120px;
-            height: 8px;
-            background: linear-gradient(90deg, var(--vibrant-red), var(--bright-coral), var(--golden-yellow));
-            margin: 0 auto 30px;
-            border-radius: 4px;
-        }
+    /* Testimonials */
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .quote { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 8px 18px rgb(0 0 0 / 4%); }
+    .quote strong { color: var(--brand); }
 
-        h1 {
-            font-family: 'Caveat', 'Kalam', cursive;
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 700;
-            color: var(--deep-red);
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 0px var(--golden-yellow);
-            letter-spacing: 0.02em;
-            transform: rotate(-1deg);
-        }
+    /* Calendly */
+    .calendly { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 10px 24px rgb(0 0 0 / 5%); }
+    .iframe-wrap { position: relative; width: 100%; padding-bottom: 68%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+    .iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-        .subtitle {
-            font-size: 1.4rem;
-            color: var(--burnt-orange);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    /* Contact card */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .contact .card { background: linear-gradient(180deg, #fff7ea, #fff); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
+    .contact dt { font-weight: 700; color: var(--brand); }
+    .contact dd { margin: 0 0 10px; }
 
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--charcoal);
-            font-style: italic;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    /* Footer */
+    footer { padding: 28px 0 44px; border-top: 1px solid var(--line); color: var(--muted); }
 
-        /* Main sections */
-        section {
-            margin: 60px 0;
-            position: relative;
-        }
+    /* Pills Bar */
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .pill { border: 1px solid var(--line); background: #fff; padding: 6px 10px; border-radius: 999px; font-size: .9rem; color: var(--muted); }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--deep-red);
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 6px;
-            background: var(--golden-yellow);
-            border-radius: 3px;
-        }
-
-        .chunky-border {
-            border-left: 8px solid var(--burnt-orange);
-            padding-left: 30px;
-            margin: 30px 0;
-            background: rgba(244, 196, 161, 0.1);
-            padding: 25px 30px;
-            border-radius: 0 15px 15px 0;
-        }
-
-        /* About section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-            margin-top: 30px;
-        }
-
-        .credentials {
-            background: linear-gradient(135deg, var(--warm-white), var(--cream));
-            padding: 30px;
-            border-radius: 20px;
-            border: 4px solid var(--golden-yellow);
-            box-shadow: 8px 8px 0px var(--deep-red);
-        }
-
-        .credential-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .credential-item::before {
-            content: '●';
-            position: absolute;
-            left: 0;
-            color: var(--burnt-orange);
-            font-size: 1.5rem;
-        }
-
-        /* Services section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .service-category {
-            background: var(--warm-white);
-            border: 5px solid var(--deep-red);
-            border-radius: 25px;
-            padding: 30px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .service-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-category h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--deep-red);
-            margin-bottom: 20px;
-            border-bottom: 3px solid var(--golden-yellow);
-            padding-bottom: 10px;
-        }
-
-        .service-list {
-            list-style: none;
-        }
-
-        .service-list li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 1.1rem;
-        }
-
-        .service-list li::before {
-            content: '●';
-            position: absolute;
-            left: 0;
-            color: var(--burnt-orange);
-            font-size: 1.2rem;
-        }
-
-        .service-list strong {
-            color: var(--deep-red);
-        }
-
-        /* Why choose section */
-        .why-choose-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, var(--golden-yellow), var(--warm-gold));
-            padding: 25px;
-            border-radius: 20px;
-            border: 4px solid var(--deep-red);
-            color: var(--charcoal);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            transform: rotate(45deg);
-        }
-
-        .feature-card h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--deep-red);
-            margin-bottom: 15px;
-        }
-
-        /* Contact section */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 30px;
-        }
-
-        .contact-info {
-            background: var(--deep-red);
-            color: var(--warm-white);
-            padding: 40px;
-            border-radius: 25px;
-            border: 6px solid var(--golden-yellow);
-            position: relative;
-        }
-
-        .contact-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 25px;
-            color: var(--golden-yellow);
-        }
-
-        .contact-item {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-item strong {
-            color: var(--golden-yellow);
-            margin-right: 10px;
-            min-width: 80px;
-        }
-
-        .calendly-container {
-            background: var(--warm-white);
-            padding: 30px;
-            border-radius: 25px;
-            border: 5px solid var(--burnt-orange);
-            text-align: center;
-        }
-
-        .calendly-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--burnt-orange), var(--deep-red));
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-top: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 4px solid var(--golden-yellow);
-        }
-
-        .calendly-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(139, 38, 53, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: var(--warm-white);
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 80px;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .about-content, 
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .chunky-border {
-                padding: 20px;
-                margin: 20px 0;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation dots */
-        .nav-dots {
-            position: fixed;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
-        }
-
-        .nav-dot {
-            display: block;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: var(--golden-yellow);
-            margin: 15px 0;
-            opacity: 0.6;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            border: 3px solid var(--deep-red);
-        }
-
-        .nav-dot:hover {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-
-        @media (max-width: 768px) {
-            .nav-dots {
-                display: none;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-card { grid-template-columns: 92px 1fr; }
+      .quotes { grid-template-columns: 1fr 1fr; }
+      .grid.services .service { grid-column: span 12; }
+      .motif { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 560px) {
+      .quotes { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-
-    <div class="nav-dots">
-        <a href="#home" class="nav-dot"></a>
-        <a href="#services" class="nav-dot"></a>
-        <a href="#about" class="nav-dot"></a>
-        <a href="#contact" class="nav-dot"></a>
-    </div>
-
-    <div class="container">
-        <header id="home">
-            <div class="header-decoration"></div>
-            <h1>Dr. Kelly Eckenrode</h1>
-            <p class="subtitle">PhD, Molecular Biology</p>
-            <p class="tagline">Academic Excellence Through Personalized Learning</p>
-        </header>
-
-        <section id="services">
-            <h2 class="section-title">Comprehensive Tutoring Services</h2>
-            <p style="font-size: 1.3rem; color: var(--burnt-orange); font-weight: 600; margin-bottom: 30px;">Serving Sharon, Dedham, Walpole, Canton, and Stoughton</p>
-            
-            <div class="services-grid">
-                <div class="service-category">
-                    <h3>Core Academic Support</h3>
-                    <ul class="service-list">
-                        <li><strong>Biology & Life Sciences:</strong> From foundational concepts to advanced topics, guided by real laboratory experience</li>
-                        <li><strong>AP Biology:</strong> Expert preparation with insider knowledge of exam strategies and content mastery</li>
-                        <li><strong>AP Environmental Science:</strong> Connect classroom theory to real-world applications</li>
-                        <li><strong>Middle School Mathematics:</strong> Building strong foundations for future STEM success</li>
-                        <li><strong>Data Analysis:</strong> Essential skills for modern academic and professional success</li>
-                        <li><strong>Academic Writing:</strong> Develop clear, compelling scientific and analytical writing</li>
-                    </ul>
-                </div>
-
-                <div class="service-category">
-                    <h3>Specialized Support Services</h3>
-                    <ul class="service-list">
-                        <li><strong>Test Preparation:</strong> Strategic preparation for standardized tests, AP exams, and entrance exams</li>
-                        <li><strong>Executive Function Coaching:</strong> Organization, time management, and study skills development</li>
-                        <li><strong>Art Play for Anxiety:</strong> Creative therapeutic approaches to reduce academic stress and build confidence</li>
-                    </ul>
-                </div>
-            </div>
-
-            <section style="margin-top: 60px;">
-                <h3 class="section-title" style="font-size: 2rem;">Why Choose My Services?</h3>
-                
-                <div class="why-choose-grid">
-                    <div class="feature-card">
-                        <h4>Research-Backed Methods</h4>
-                        <p>Combines cutting-edge scientific knowledge with proven educational techniques developed through years of classroom experience.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h4>Individualized Approach</h4>
-                        <p>Every student receives a customized learning plan based on their strengths, challenges, and goals.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h4>Real-World Connections</h4>
-                        <p>Laboratory experience brings authentic scientific context to abstract concepts, making learning more meaningful and memorable.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h4>Holistic Support</h4>
-                        <p>Beyond academics—addressing the whole student through anxiety management, executive function skills, and confidence building.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h4>Proven Track Record</h4>
-                        <p>15 years of successfully guiding students from diverse backgrounds to academic achievement.</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <section id="about">
-            <h2 class="section-title">About Your Educator</h2>
-            
-            <div class="about-content">
-                <div>
-                    <div class="chunky-border">
-                        <p>With a PhD in Molecular Biology from the City University of New York and 18 years of hands-on laboratory experience at prestigious institutions including Harvard Medical School and Brooklyn College, Dr. E brings world-class scientific expertise directly to your student's learning journey.</p>
-                    </div>
-                    
-                    <div class="chunky-border">
-                        <p>As a Massachusetts Licensed Biology teacher with 15 years in education—from specialized ABA therapy to teaching at the renowned Boston Latin School—Dr. E understands how to translate complex concepts into accessible, engaging lessons tailored to each student's unique learning style.</p>
-                    </div>
-                </div>
-
-                <div class="credentials">
-                    <h3 style="color: var(--deep-red); font-family: 'Playfair Display', serif; margin-bottom: 25px;">Credentials & Experience</h3>
-                    <div class="credential-item">
-                        <strong>PhD Molecular Biology</strong><br>
-                        City University of New York
-                    </div>
-                    <div class="credential-item">
-                        <strong>18 Years Laboratory Experience</strong><br>
-                        Harvard Medical School, Brooklyn College
-                    </div>
-                    <div class="credential-item">
-                        <strong>15 Years Education Experience</strong><br>
-                        ABA Therapy to Boston Latin School
-                    </div>
-                    <div class="credential-item">
-                        <strong>Massachusetts Licensed</strong><br>
-                        Biology Teacher
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Ready to Unlock Your Student's Potential?</h2>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <strong>Phone:</strong> 617-615-6794
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email:</strong> Dre.tutor@gmail.com
-                    </div>
-                    <div class="contact-item">
-                        <strong>Areas:</strong> Sharon, Dedham, Walpole, Canton, Stoughton
-                    </div>
-                    <p style="margin-top: 25px; font-style: italic; color: var(--golden-yellow);">Initial consultations are free and available to discuss your student's specific needs and create a personalized learning plan.</p>
-                </div>
-
-                <div class="calendly-container">
-                    <h3 style="color: var(--deep-red); font-family: 'Playfair Display', serif; margin-bottom: 20px;">Schedule a Consultation</h3>
-                    <p style="margin-bottom: 20px; font-size: 1.1rem;">Book your free initial consultation to discuss your student's goals and create a customized learning approach.</p>
-                    <a href="https://calendly.com/dre-tutor" class="calendly-btn" target="_blank">Schedule Now</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Dr. Kelly Eckenrode. Empowering students through personalized academic excellence.</p>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <!-- Stylized DNA helix logo mark -->
+          <svg viewBox="0 0 24 24" role="img" aria-label="DNA logo"><path d="M7 4c0 3 5 3 5 6s-5 3-5 6m10-12c0 3-5 3-5 6s5 3 5 6" stroke="white" stroke-width="2" fill="none"/></svg>
         </div>
-    </footer>
+        <span>Dr. E Tutoring</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#science">Science‑forward</a>
+        <a href="#schedule" class="btn">Schedule</a>
+      </nav>
+      <a href="#schedule" class="btn btn-primary">Book a consultation</a>
+    </div>
+  </header>
 
-    <script>
-        // Smooth scrolling for navigation dots
-        document.querySelectorAll('.nav-dot').forEach(dot => {
-            dot.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
+  <main class="container">
+    <!-- Hero with photo + mini about -->
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Academic excellence, personalized</div>
+        <h1>High‑impact tutoring by <span style="white-space:nowrap;">Dr. Kelly Eckenrode</span>, PhD</h1>
+        <p class="sub">Focused one‑on‑one support for Biology, AP Bio, AP Environmental Science, middle‑school math foundations, academic writing, executive function coaching, and test prep. Serving Sharon, Dedham, Norwood, Walpole, Canton, and Stoughton.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#schedule">Book a consult</a>
+          <a class="btn btn-ghost" href="#services">Explore services</a>
+        </div>
+        <div class="pills" aria-label="Subjects and specialties">
+          <span class="pill">AP Biology</span>
+          <span class="pill">AP Environmental Science</span>
+          <span class="pill">Middle‑school Math</span>
+          <span class="pill">Academic Writing</span>
+          <span class="pill">Executive Function</span>
+          <span class="pill">Test Prep</span>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="About Dr. E">
+        <img class="avatar" src="dr_e.jpg" alt="Dr. E smiling in a warm, bright setting" />
+        <div class="mini-about">
+          <h3>Your educator</h3>
+          <p><strong>PhD in Molecular Biology</strong> (CUNY), <strong>18 years of lab experience</strong> (Harvard Medical School, Brooklyn College), and <strong>15 years in the classroom</strong> including Boston Latin School. Massachusetts‑licensed Biology teacher.
+          </p>
+          <div class="kpis">
+            <span title="Years teaching">📚 15+ yrs</span>
+            <span title="Lab experience">🧪 18 yrs</span>
+            <span title="Licensed">🎓 MA‑licensed</span>
+          </div>
+        </div>
+      </aside>
+    </section>
 
-        // Add some interactive elements
-        const shapes = document.querySelectorAll('.shape');
-        
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.02;
-                const x = mouseX * speed * 20;
-                const y = mouseY * speed * 20;
-                shape.style.transform += ` translate(${x}px, ${y}px)`;
-            });
-        });
-    </script>
+    <!-- Services -->
+    <section id="services">
+      <div class="section-head">
+        <h2>Comprehensive Tutoring Services</h2>
+        <p>Evidence‑based methods. Individualized plans. Real‑world connections.</p>
+      </div>
+      <div class="grid services">
+        <!-- Service item -->
+        <article class="service">
+          <!-- Beaker icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8M10 3v4l-5 9a4 4 0 0 0 3.5 6h7a4 4 0 0 0 3.5-6l-5-9V3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>
+          <div>
+            <h3>Biology & Life Sciences (incl. AP Biology)</h3>
+            <p>From foundations to advanced topics, with exam‑ready strategies and the context only real lab work provides.</p>
+          </div>
+        </article>
+        <article class="service">
+          <!-- Leaf/planet icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8C8 4 4 7.6 4 12Zm1.5-.5c2.5-.8 7.7-.2 12 .8-2.3 3.8-6.3 5.6-9.6 4.7-2.3-.7-3.3-3.1-2.4-5.5Z" fill="currentColor"/></svg>
+          <div>
+            <h3>AP Environmental Science</h3>
+            <p>Connect classroom theory to real ecosystems, data, and policy—preparing students for the AP exam and beyond.</p>
+          </div>
+        </article>
+        <article class="service">
+          <!-- Abacus icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12m5-12v12m5-12v12M7 10h4m-4 4h10" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>
+          <div>
+            <h3>Middle‑School Mathematics</h3>
+            <p>Strengthen number sense, algebraic thinking, and problem‑solving to set a confident path for higher‑level math.</p>
+          </div>
+        </article>
+        <article class="service">
+          <!-- Document icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Zm0 0v5h5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M8 13h8M8 17h6M8 9h3" stroke="currentColor" stroke-width="1.75"/></svg>
+          <div>
+            <h3>Academic Writing</h3>
+            <p>Develop clear, structured essays and lab reports with a compelling scientific voice and rigorous evidence.</p>
+          </div>
+        </article>
+        <article class="service">
+          <!-- Stopwatch icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4M12 2v3m8 9a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-5v5l3 2" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>
+          <div>
+            <h3>Test Preparation</h3>
+            <p>Targeted plans for AP exams and standardized tests to maximize confidence and score gains.</p>
+          </div>
+        </article>
+        <article class="service">
+          <!-- Checklist icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12" stroke="currentColor" stroke-width="1.75" fill="none"/><path d="M3 7l1.8 1.8L7 6.5" stroke="currentColor" stroke-width="1.75" fill="none"/></svg>
+          <div>
+            <h3>Executive Function Coaching</h3>
+            <p>Organization, time‑management, and study systems that stick—reducing stress and improving follow‑through.</p>
+          </div>
+        </article>
+      </div>
+      <div class="pills" style="margin-top:14px">
+        <span class="pill">Sharon</span><span class="pill">Dedham</span><span class="pill">Norwood</span><span class="pill">Walpole</span><span class="pill">Canton</span><span class="pill">Stoughton</span>
+      </div>
+    </section>
+
+    <!-- Science-forward motif section -->
+    <section id="science">
+      <div class="section-head">
+        <h2>Science‑Forward, Student‑Centered</h2>
+        <p>Make complex ideas memorable with real‑world science and research‑backed teaching.</p>
+      </div>
+      <div class="motif">
+        <div>
+          <h3 style="margin-top:0">Why students thrive with Dr. E</h3>
+          <ul>
+            <li><strong>Research‑backed methods</strong> developed across 15 years in education.</li>
+            <li><strong>Individualized plans</strong> aligned to each student’s strengths and goals.</li>
+            <li><strong>Real‑world connections</strong> from 18 years of laboratory experience.</li>
+            <li><strong>Holistic support</strong> including anxiety reduction and confidence building.</li>
+          </ul>
+        </div>
+        <!-- A tidy science illustration (DNA + beaker) -->
+        <svg viewBox="0 0 640 320" role="img" aria-label="Science themed illustration">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0%" stop-color="#f9d777"/><stop offset="100%" stop-color="#ea9a52"/></linearGradient>
+            <linearGradient id="g2" x1="0" x2="1"><stop offset="0%" stop-color="#a73d2a"/><stop offset="100%" stop-color="#d46b1a"/></linearGradient>
+          </defs>
+          <rect x="0" y="0" width="640" height="320" rx="16" fill="#fff" stroke="#eddcc6"/>
+          <g transform="translate(60,40)">
+            <!-- DNA curve -->
+            <path d="M0,0 C60,40 60,120 0,160 M80,0 C20,40 20,120 80,160" fill="none" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
+            <g stroke="#eddcc6" stroke-width="2" opacity="0.8">
+              <path d="M0,20 H80"/><path d="M0,60 H80"/><path d="M0,100 H80"/><path d="M0,140 H80"/>
+            </g>
+          </g>
+          <!-- Beaker -->
+          <g transform="translate(340,40)">
+            <rect x="40" y="0" width="120" height="20" rx="10" fill="#fff" stroke="#eddcc6"/>
+            <path d="M70,0 v110 c0,15 -30,30 -30,50 h140 c0,-20 -30,-35 -30,-50 V0" fill="#fff" stroke="#eddcc6"/>
+            <path d="M70,90 h80" stroke="#ea9a52" stroke-width="6"/>
+            <path d="M70,120 h80" stroke="#f2b705" stroke-width="6"/>
+            <circle cx="110" cy="70" r="6" fill="url(#g1)"/>
+            <circle cx="130" cy="110" r="5" fill="url(#g1)"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Testimonials (optional; placeholder text)
+    <section aria-label="Testimonials">
+      <div class="section-head">
+        <h2>What families say</h2>
+        <p>Short, specific praise builds trust. Replace with real quotes.</p>
+      </div>
+      <div class="quotes">
+        <figure class="quote"><blockquote>“Our daughter’s AP Bio grade jumped a full letter after three sessions. She finally <em>gets</em> it.”</blockquote><figcaption><strong>Parent, Sharon</strong></figcaption></figure>
+        <figure class="quote"><blockquote>“The executive function coaching changed homework from nightly battles to a routine.”</blockquote><figcaption><strong>Parent, Walpole</strong></figcaption></figure>
+        <figure class="quote"><blockquote>“Real lab stories made the science click—best prep we could have asked for.”</blockquote><figcaption><strong>Student, Canton</strong></figcaption></figure>
+      </div>
+    </section> -->
+
+    <!-- Calendly Embed -->
+    <section id="schedule">
+      <div class="section-head">
+        <h2>Book a Free 20‑Minute Consultation</h2>
+        <p>We’ll map goals, current challenges, and a practical plan forward.</p>
+      </div>
+      <div class="calendly">
+        <div class="iframe-wrap">
+          <!-- Replace link if you use a different booking page -->
+          <iframe title="Schedule with Dr. E on Calendly" src="https://calendly.com/dre-tutor?hide_gdpr_banner=1" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Coverage -->
+    <section id="about">
+      <div class="section-head">
+        <h2>Contact & Coverage</h2>
+        <p>Serving families in Sharon, Dedham, Norwood, Walpole, Canton, and Stoughton.</p>
+      </div>
+      <div class="contact">
+        <div class="card" role="region" aria-label="Contact info">
+          <dl>
+            <dt>Phone</dt><dd><a href="tel:16176156794">(617) 615‑6794</a></dd>
+            <dt>Email</dt><dd><a href="mailto:Dre.tutor@gmail.com">Dre.tutor@gmail.com</a></dd>
+            <dt>Licensure</dt><dd>Massachusetts‑licensed Biology teacher</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Credentials at a Glance</h3>
+          <ul>
+            <li>PhD, Molecular Biology (City University of New York)</li>
+            <li>18 years of laboratory experience (Harvard Medical School, Brooklyn College)</li>
+            <li>15 years in education, including Boston Latin School</li>
+          </ul>
+          <div class="pills"><span class="pill">Research‑backed</span><span class="pill">Student‑centered</span><span class="pill">Results‑focused</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <small>© <span id="year"></span> Dr. Kelly Eckenrode — Empowering students through personalized academic excellence.</small>
+        <a href="#home" class="pill" aria-label="Back to top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
