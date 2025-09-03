@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kelly Eckenrode - Academic Excellence Through Personalized Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Caveat:wght@400;700&family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-red: #A52A2A;
+            --burnt-orange: #FF4500;
+            --golden-yellow: #FFD700;
+            --warm-gold: #FFA500;
+            --cream: #F5F5DC;
+            --warm-white: #FFF8E7;
+            --charcoal: #2F2F2F;
+            --soft-pink: #FF69B4;
+            --vibrant-red: #DC143C;
+            --bright-coral: #FF6347;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+            overflow-x: hidden;
+        }
+
+        /* Matisse-inspired abstract background elements */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50% 20% 80% 30%;
+        }
+
+        .shape-1 {
+            top: 10%;
+            left: -5%;
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--vibrant-red), var(--bright-coral));
+            opacity: 0.15;
+            transform: rotate(15deg);
+        }
+
+        .shape-2 {
+            top: 60%;
+            right: -10%;
+            width: 250px;
+            height: 180px;
+            background: linear-gradient(120deg, var(--golden-yellow), var(--warm-gold));
+            opacity: 0.12;
+            transform: rotate(-25deg);
+        }
+
+        .shape-3 {
+            bottom: 20%;
+            left: 15%;
+            width: 180px;
+            height: 220px;
+            background: var(--soft-pink);
+            opacity: 0.1;
+            transform: rotate(45deg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-decoration {
+            width: 120px;
+            height: 8px;
+            background: linear-gradient(90deg, var(--vibrant-red), var(--bright-coral), var(--golden-yellow));
+            margin: 0 auto 30px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-family: 'Caveat', 'Kalam', cursive;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 700;
+            color: var(--deep-red);
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px var(--golden-yellow);
+            letter-spacing: 0.02em;
+            transform: rotate(-1deg);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: var(--burnt-orange);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main sections */
+        section {
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-red);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 6px;
+            background: var(--golden-yellow);
+            border-radius: 3px;
+        }
+
+        .chunky-border {
+            border-left: 8px solid var(--burnt-orange);
+            padding-left: 30px;
+            margin: 30px 0;
+            background: rgba(244, 196, 161, 0.1);
+            padding: 25px 30px;
+            border-radius: 0 15px 15px 0;
+        }
+
+        /* About section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        .credentials {
+            background: linear-gradient(135deg, var(--warm-white), var(--cream));
+            padding: 30px;
+            border-radius: 20px;
+            border: 4px solid var(--golden-yellow);
+            box-shadow: 8px 8px 0px var(--deep-red);
+        }
+
+        .credential-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .credential-item::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--burnt-orange);
+            font-size: 1.5rem;
+        }
+
+        /* Services section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-category {
+            background: var(--warm-white);
+            border: 5px solid var(--deep-red);
+            border-radius: 25px;
+            padding: 30px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .service-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--deep-red);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--golden-yellow);
+            padding-bottom: 10px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .service-list li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--burnt-orange);
+            font-size: 1.2rem;
+        }
+
+        .service-list strong {
+            color: var(--deep-red);
+        }
+
+        /* Why choose section */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--golden-yellow), var(--warm-gold));
+            padding: 25px;
+            border-radius: 20px;
+            border: 4px solid var(--deep-red);
+            color: var(--charcoal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .feature-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--deep-red);
+            margin-bottom: 15px;
+        }
+
+        /* Contact section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .contact-info {
+            background: var(--deep-red);
+            color: var(--warm-white);
+            padding: 40px;
+            border-radius: 25px;
+            border: 6px solid var(--golden-yellow);
+            position: relative;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--golden-yellow);
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item strong {
+            color: var(--golden-yellow);
+            margin-right: 10px;
+            min-width: 80px;
+        }
+
+        .calendly-container {
+            background: var(--warm-white);
+            padding: 30px;
+            border-radius: 25px;
+            border: 5px solid var(--burnt-orange);
+            text-align: center;
+        }
+
+        .calendly-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--burnt-orange), var(--deep-red));
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid var(--golden-yellow);
+        }
+
+        .calendly-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(139, 38, 53, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--warm-white);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .about-content, 
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .chunky-border {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation dots */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+
+        .nav-dot {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--golden-yellow);
+            margin: 15px 0;
+            opacity: 0.6;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border: 3px solid var(--deep-red);
+        }
+
+        .nav-dot:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .nav-dots {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="nav-dots">
+        <a href="#home" class="nav-dot"></a>
+        <a href="#services" class="nav-dot"></a>
+        <a href="#about" class="nav-dot"></a>
+        <a href="#contact" class="nav-dot"></a>
+    </div>
+
+    <div class="container">
+        <header id="home">
+            <div class="header-decoration"></div>
+            <h1>Dr. Kelly Eckenrode</h1>
+            <p class="subtitle">PhD, Molecular Biology</p>
+            <p class="tagline">Academic Excellence Through Personalized Learning</p>
+        </header>
+
+        <section id="services">
+            <h2 class="section-title">Comprehensive Tutoring Services</h2>
+            <p style="font-size: 1.3rem; color: var(--burnt-orange); font-weight: 600; margin-bottom: 30px;">Serving Sharon, Dedham, Walpole, Canton, and Stoughton</p>
+            
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Core Academic Support</h3>
+                    <ul class="service-list">
+                        <li><strong>Biology & Life Sciences:</strong> From foundational concepts to advanced topics, guided by real laboratory experience</li>
+                        <li><strong>AP Biology:</strong> Expert preparation with insider knowledge of exam strategies and content mastery</li>
+                        <li><strong>AP Environmental Science:</strong> Connect classroom theory to real-world applications</li>
+                        <li><strong>Middle School Mathematics:</strong> Building strong foundations for future STEM success</li>
+                        <li><strong>Data Analysis:</strong> Essential skills for modern academic and professional success</li>
+                        <li><strong>Academic Writing:</strong> Develop clear, compelling scientific and analytical writing</li>
+                    </ul>
+                </div>
+
+                <div class="service-category">
+                    <h3>Specialized Support Services</h3>
+                    <ul class="service-list">
+                        <li><strong>Test Preparation:</strong> Strategic preparation for standardized tests, AP exams, and entrance exams</li>
+                        <li><strong>Executive Function Coaching:</strong> Organization, time management, and study skills development</li>
+                        <li><strong>Art Play for Anxiety:</strong> Creative therapeutic approaches to reduce academic stress and build confidence</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section style="margin-top: 60px;">
+                <h3 class="section-title" style="font-size: 2rem;">Why Choose My Services?</h3>
+                
+                <div class="why-choose-grid">
+                    <div class="feature-card">
+                        <h4>Research-Backed Methods</h4>
+                        <p>Combines cutting-edge scientific knowledge with proven educational techniques developed through years of classroom experience.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Individualized Approach</h4>
+                        <p>Every student receives a customized learning plan based on their strengths, challenges, and goals.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Real-World Connections</h4>
+                        <p>Laboratory experience brings authentic scientific context to abstract concepts, making learning more meaningful and memorable.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Holistic Support</h4>
+                        <p>Beyond academics—addressing the whole student through anxiety management, executive function skills, and confidence building.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Proven Track Record</h4>
+                        <p>15 years of successfully guiding students from diverse backgrounds to academic achievement.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About Your Educator</h2>
+            
+            <div class="about-content">
+                <div>
+                    <div class="chunky-border">
+                        <p>With a PhD in Molecular Biology from the City University of New York and 18 years of hands-on laboratory experience at prestigious institutions including Harvard Medical School and Brooklyn College, Dr. E brings world-class scientific expertise directly to your student's learning journey.</p>
+                    </div>
+                    
+                    <div class="chunky-border">
+                        <p>As a Massachusetts Licensed Biology teacher with 15 years in education—from specialized ABA therapy to teaching at the renowned Boston Latin School—Dr. E understands how to translate complex concepts into accessible, engaging lessons tailored to each student's unique learning style.</p>
+                    </div>
+                </div>
+
+                <div class="credentials">
+                    <h3 style="color: var(--deep-red); font-family: 'Playfair Display', serif; margin-bottom: 25px;">Credentials & Experience</h3>
+                    <div class="credential-item">
+                        <strong>PhD Molecular Biology</strong><br>
+                        City University of New York
+                    </div>
+                    <div class="credential-item">
+                        <strong>18 Years Laboratory Experience</strong><br>
+                        Harvard Medical School, Brooklyn College
+                    </div>
+                    <div class="credential-item">
+                        <strong>15 Years Education Experience</strong><br>
+                        ABA Therapy to Boston Latin School
+                    </div>
+                    <div class="credential-item">
+                        <strong>Massachusetts Licensed</strong><br>
+                        Biology Teacher
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Ready to Unlock Your Student's Potential?</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> 617-615-6794
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> Dre.tutor@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Areas:</strong> Sharon, Dedham, Walpole, Canton, Stoughton
+                    </div>
+                    <p style="margin-top: 25px; font-style: italic; color: var(--golden-yellow);">Initial consultations are free and available to discuss your student's specific needs and create a personalized learning plan.</p>
+                </div>
+
+                <div class="calendly-container">
+                    <h3 style="color: var(--deep-red); font-family: 'Playfair Display', serif; margin-bottom: 20px;">Schedule a Consultation</h3>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">Book your free initial consultation to discuss your student's goals and create a customized learning approach.</p>
+                    <a href="https://calendly.com/dre-tutor" class="calendly-btn" target="_blank">Schedule Now</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dr. Kelly Eckenrode. Empowering students through personalized academic excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation dots
+        document.querySelectorAll('.nav-dot').forEach(dot => {
+            dot.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Add some interactive elements
+        const shapes = document.querySelectorAll('.shape');
+        
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.02;
+                const x = mouseX * speed * 20;
+                const y = mouseY * speed * 20;
+                shape.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
