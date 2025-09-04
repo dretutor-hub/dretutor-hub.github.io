@@ -338,7 +338,7 @@
   <footer>
     <div class="container">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-        <small>© <span id="year"></span> Dr. Kelly Eckenrode — Empowering students through personalized academic excellence.</small>
+        <small>© <span id="year"></span> Dr. Kelly Eckenrode — Empowering students through personalized academic excellence. Designed by <a href="https://winkitude.com" target="_blank">Winkitude</a></small>
         <a href="#home" class="pill" aria-label="Back to top">Back to top ↑</a>
       </div>
     </div>
@@ -348,5 +348,15 @@
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X1LPSW7L6N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X1LPSW7L6N');
+</script>
 </body>
 </html>
