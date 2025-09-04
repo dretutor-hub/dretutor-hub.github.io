@@ -6,120 +6,89 @@
   <title>Dr. E Tutoring – Academic Excellence Through Personalized Learning</title>
   <meta name="description" content="One‑on‑one tutoring by Dr. Kelly Eckenrode (PhD, Molecular Biology). High‑school & middle‑school support across Biology, AP Bio, APES, Math foundations, writing, executive function coaching, and test prep in Sharon, Dedham, Norwood, Walpole, Canton, and Stoughton." />
 
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Dr. E Tutoring – Academic Excellence Through Personalized Learning">
+<meta property="og:description" content="High-impact one-on-one tutoring by Dr. Kelly Eckenrode, PhD. Biology, AP Bio, APES, math, writing, executive function coaching, and test prep.">
+<meta property="og:image" content="https://dretutor/images/science.png">
+<meta property="og:url" content="https://dretutor.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. E Tutoring – Academic Excellence Through Personalized Learning">
+<meta name="twitter:description" content="High-impact one-on-one tutoring by Dr. Kelly Eckenrode, PhD. Biology, AP Bio, APES, math, writing, executive function coaching, and test prep.">
+<meta name="twitter:image" content="https://dretutor.com/images/science.png">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">   
   <style>
-    :root {
-      /* warm, welcoming palette */
-      --bg: #fffaf3;            /* warm paper */
-      --card: #fffdf8;          /* softer card */
-      --ink: #2d2a26;           /* charcoal */
-      --brand: #a73d2a;         /* warm brick */
-      --brand-2: #d46b1a;       /* amber/coral */
-      --brand-3: #f2b705;       /* golden */
-      --muted: #7a6f66;         
-      --line: #eddcc6;          /* light line */
-      --success: #2a7a4b;
-    }
+.service p { margin: 0; color: var(--muted); }
 
-    html { scroll-behavior: smooth; }
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-      margin: 0; background: var(--bg); color: var(--ink);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      line-height: 1.6; letter-spacing: 0.2px;
-    }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    .container { width: min(1200px, 92vw); margin-inline: auto; }
+/* Science motif */
+.motif { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: center; background: linear-gradient(145deg, #fff7e3, #fffaf3); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
+.motif-graphic img {
+display: block;
+width: 100%;
+height: auto;
+border-radius: 12px;
+border: 1px solid var(--line);
+background: #fff;
+}
+@media (max-width: 420px) {
+.topbar .btn-primary {
+font-size: 0.85rem;
+padding: 8px 12px;
+}
+}
+@media (max-width: 960px) {
+#science .motif { grid-template-columns: 1fr; }
+}
 
-    /* Header / Nav */
-    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--bg) 80%, white 20% / 0.8); border-bottom: 1px solid var(--line); }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 16px; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.3px; }
-    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 70%); box-shadow: 0 4px 14px rgb(167 61 42 / 18%); }
-    .brand-mark svg { width: 22px; height: 22px; fill: white; }
-    .nav a.btn { display: inline-block; padding: 10px 16px; border-radius: 999px; background: linear-gradient(135deg, var(--brand-2), var(--brand)); color: #fff; font-weight: 600; border: 2px solid var(--brand-3); box-shadow: 0 6px 18px rgb(212 107 26 / 25%); }
-    .nav-links { display: flex; gap: 20px; align-items: center; font-weight: 600; }
-    .nav-links a { padding: 8px 10px; border-radius: 8px; }
-    .nav-links a:hover { background: #fff; }
 
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; padding: 40px 0 24px; }
-    .eyebrow { color: var(--brand-2); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem; }
-    h1 { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.25rem); line-height: 1.12; margin: 6px 0 10px; color: var(--brand); }
-    .sub { font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
-    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px; }
-    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; border: none; font-weight: 700; cursor: pointer; }
-    .btn-primary { background: linear-gradient(135deg, var(--brand-3), var(--brand-2)); color: #2c1b00; border: 2px solid color-mix(in oklab, var(--brand-3) 80%, black 10%); }
-    .btn-primary:hover { filter: contrast(1.05) saturate(1.05); }
-    .btn-ghost { background: #fff; color: var(--brand); border: 2px solid var(--line); }
-    .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; box-shadow: 0 12px 30px rgb(0 0 0 / 6%);
-      position: relative; overflow: hidden; }
-    .hero-card::after { content: ""; position: absolute; inset: -30% -40% auto auto; width: 220px; height: 220px; background: radial-gradient(120px 120px at 70% 30%, color-mix(in oklab, var(--brand-3) 60%, white 40%), transparent 70%);
-      opacity: 0.35; pointer-events: none; }
-    .avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; object-fit: cover; background: #f6ead9; border: 1px solid var(--line); }
-    .mini-about h3 { margin: 0 0 6px; font-family: "Playfair Display", serif; font-size: 1.2rem; color: var(--ink); }
-    .kpis { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-weight: 600; color: var(--muted); }
-    .kpis span { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--line); }
+/* Testimonials */
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.quote { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 8px 18px rgb(0 0 0 / 4%); }
+.quote strong { color: var(--brand); }
 
-    /* Sections */
-    section { padding: 56px 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
-    .section-head h2 { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 3.5vw, 2.1rem); color: var(--ink); margin: 0; }
-    .section-head p { margin: 0; color: var(--muted); }
 
-    /* Services */
-    .grid { display: grid; gap: 18px; }
-    .grid.services { grid-template-columns: repeat(12, 1fr); }
-    .service { grid-column: span 6; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: start; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
-    .service svg { width: 36px; height: 36px; }
-    .service h3 { margin: 0 0 6px; font-size: 1.15rem; }
-    .service p { margin: 0; color: var(--muted); }
+/* Calendly */
+.calendly { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 10px 24px rgb(0 0 0 / 5%); }
+.iframe-wrap { position: relative; width: 100%; padding-bottom: 68%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+.iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-    /* Science motif */
-    .motif { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: center; background: linear-gradient(145deg, #fff7e3, #fffaf3); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
-    .motif svg { width: 100%; height: auto; }
 
-    /* Testimonials */
-    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .quote { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 8px 18px rgb(0 0 0 / 4%); }
-    .quote strong { color: var(--brand); }
+/* Contact card */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.contact .card { background: linear-gradient(180deg, #fff7ea, #fff); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
+.contact dt { font-weight: 700; color: var(--brand); }
+.contact dd { margin: 0 0 10px; }
 
-    /* Calendly */
-    .calendly { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 10px 24px rgb(0 0 0 / 5%); }
-    .iframe-wrap { position: relative; width: 100%; padding-bottom: 68%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
-    .iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-    /* Contact card */
-    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .contact .card { background: linear-gradient(180deg, #fff7ea, #fff); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgb(0 0 0 / 4%); }
-    .contact dt { font-weight: 700; color: var(--brand); }
-    .contact dd { margin: 0 0 10px; }
+/* Footer */
+footer { padding: 28px 0 44px; border-top: 1px solid var(--line); color: var(--muted); }
 
-    /* Footer */
-    footer { padding: 28px 0 44px; border-top: 1px solid var(--line); color: var(--muted); }
 
-    /* Pills Bar */
-    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .pill { border: 1px solid var(--line); background: #fff; padding: 6px 10px; border-radius: 999px; font-size: .9rem; color: var(--muted); }
+/* Pills Bar */
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.pill { border: 1px solid var(--line); background: #fff; padding: 6px 10px; border-radius: 999px; font-size: .9rem; color: var(--muted); }
 
-    /* Responsive */
-    @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-card { grid-template-columns: 92px 1fr; }
-      .quotes { grid-template-columns: 1fr 1fr; }
-      .grid.services .service { grid-column: span 12; }
-      .motif { grid-template-columns: 1fr; }
-      .contact { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
-    @media (max-width: 560px) {
-      .quotes { grid-template-columns: 1fr; }
-    }
-  </style>
+
+/* Responsive */
+@media (max-width: 960px) {
+.hero { grid-template-columns: 1fr; }
+.hero-card { grid-template-columns: 92px 1fr; }
+.quotes { grid-template-columns: 1fr 1fr; }
+.grid.services .service { grid-column: span 12; }
+.motif { grid-template-columns: 1fr; }
+.contact { grid-template-columns: 1fr; }
+.nav-links { display: none; }
+}
+@media (max-width: 560px) {
+.quotes { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
   <header class="topbar">
@@ -255,29 +224,16 @@
           </ul>
         </div>
         <!-- A tidy science illustration (DNA + beaker) -->
-        <img src="images/science.png">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1"><stop offset="0%" stop-color="#f9d777"/><stop offset="100%" stop-color="#ea9a52"/></linearGradient>
-            <linearGradient id="g2" x1="0" x2="1"><stop offset="0%" stop-color="#a73d2a"/><stop offset="100%" stop-color="#d46b1a"/></linearGradient>
-          </defs>
-          <rect x="0" y="0" width="640" height="320" rx="16" fill="#fff" stroke="#eddcc6"/>
-          <g transform="translate(60,40)">
-            <!-- DNA curve -->
-            <path d="M0,0 C60,40 60,120 0,160 M80,0 C20,40 20,120 80,160" fill="none" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
-            <g stroke="#eddcc6" stroke-width="2" opacity="0.8">
-              <path d="M0,20 H80"/><path d="M0,60 H80"/><path d="M0,100 H80"/><path d="M0,140 H80"/>
-            </g>
-          </g>
-          <!-- Beaker -->
-          <g transform="translate(340,40)">
-            <rect x="40" y="0" width="120" height="20" rx="10" fill="#fff" stroke="#eddcc6"/>
-            <path d="M70,0 v110 c0,15 -30,30 -30,50 h140 c0,-20 -30,-35 -30,-50 V0" fill="#fff" stroke="#eddcc6"/>
-            <path d="M70,90 h80" stroke="#ea9a52" stroke-width="6"/>
-            <path d="M70,120 h80" stroke="#f2b705" stroke-width="6"/>
-            <circle cx="110" cy="70" r="6" fill="url(#g1)"/>
-            <circle cx="130" cy="110" r="5" fill="url(#g1)"/>
-          </g>
-        </svg>
+<figure class="motif-graphic">
+  <picture>
+    <!-- Modern formats first -->
+    <source srcset="images/science.webp" type="image/webp">
+    <source srcset="images/science.png" type="image/png">
+    <img src="images/science.png" alt="Science motif graphic showing DNA and a beaker">
+  </picture>
+</figure>
+
+     
       </div>
     </section>
 
